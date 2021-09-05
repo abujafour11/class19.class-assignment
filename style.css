@@ -1,0 +1,358 @@
+/* deafault-css-- */
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body,
+a,
+ul,
+li,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  max-width: 1320px;
+  margin: auto;
+}
+
+/* header-----------start */
+.header-section {
+  background-color: rgba(0, 0, 0, 0.246);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.header-left {
+  width: 40%;
+}
+
+.header-right {
+  width: 60%;
+}
+.header-right ul {
+  text-align: right;
+}
+.header-right ul li {
+  display: inline-block;
+}
+.header-right ul li a {
+  color: #eee;
+  padding: 23px 20px;
+  line-height: 37px;
+  position: relative;
+}
+.header-right ul li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-color: #cf7e13;
+  height: 3px;
+  width: 0;
+  transition: 0.5s;
+}
+.header-right ul li a:hover::before {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.header-right ul li:hover > a {
+  color: #c69453;
+}
+
+/* drobdown menu---- */
+.header-right ul li {
+  position: relative;
+}
+.header-right ul li ul {
+  position: absolute;
+  left: 0;
+  top: 140%;
+  width: 205px;
+  background-color: #eee;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: center center;
+  transition: 0.6s;
+}
+
+.header-right ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+.header-right ul li ul li {
+  display: block;
+}
+.header-right ul li ul li a {
+  display: block;
+  color: #000;
+  padding: 12px 0;
+  text-align: center;
+  margin-left: -40px;
+  transition: 0.5s;
+}
+.header-right ul li ul li a:hover {
+  background-color: #cacaca;
+  color: #cf7e13;
+}
+
+.header-right ul li ul li a::before {
+  content: "";
+  opacity: 0;
+}
+
+/* ---BANNNER SECTION------ */
+.banner {
+  background: url(./img/ia_200000019.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 210px;
+  position: relative;
+  z-index: 1;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: -1;
+}
+.banner-content {
+  color: #fff;
+  text-align: center;
+}
+.banner-content h1 {
+  font-size: 65px;
+  font-weight: 700;
+}
+.banner-content h5 {
+  font-size: 27px;
+  margin-top: -30px;
+}
+.banner-content a {
+  background-color: #c69453;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.banner-content a:hover {
+  background-color: #fff;
+  color: #cf7e13;
+}
+
+/* SERVICE-SECTION----- */
+
+.service-content {
+  margin-top: 120px;
+}
+.service-items {
+  width: 23%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 2px 3px 30px 0 rgb(216, 211, 211);
+  box-sizing: border-box;
+  padding: 45px 12px 4px;
+  transition: 0.5s;
+  margin-right: 2.5%;
+}
+.service-items:nth-child(4) {
+  margin-right: 0;
+}
+.service-items img {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  display: inline-block;
+  line-height: 75px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.service-items h2 {
+  font-size: 22px;
+  margin-top: 35px;
+}
+.service-items p {
+  font-size: 20px;
+  color: #625f5f;
+}
+.service-items a {
+  margin-bottom: 50px;
+  display: inline-block;
+  background-color: #cf7e13;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 15px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.service-items a:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.service-items:hover a {
+  background-color: #fff;
+  color: #cf7e13;
+}
+.service-items:hover {
+  background-color: #ddd;
+}
+
+.service-items:hover.service-items img {
+  transform: rotateY(360deg);
+}
+
+/*--- ABOUYT- SECTION----- */
+.about-section {
+  margin: 50px 0 50px;
+}
+.about-left {
+  width: 49%;
+  margin-top: 175px;
+}
+.about-right {
+  width: 49%;
+  margin-top: 175px;
+}
+.about-right h2 {
+  font-size: 35px;
+}
+.about-right h2 span {
+  color: #cf7e13;
+}
+.about-right p {
+  font-size: 19px;
+  line-height: 33px;
+  color: #5e5c5c;
+}
+.p-2 {
+  margin-top: 30px;
+}
+.about-right details {
+}
+.about-right details summary {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 35px;
+}
+.about-right a {
+  display: inline-block;
+  background-color: #000;
+  padding: 10px 20px;
+  color: #fff;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+.about-right a:hover {
+  background-color: #cf7e13;
+  color: #fff;
+}
+
+/* QUIC QUATE ------CONATCT--= */
+.contact-section {
+}
+.contact-left {
+  width: 49%;
+}
+.contact-left h2 {
+  font-size: 35px;
+}
+.contact-left p {
+  font-size: 19px;
+  color: #5e5c5c;
+}
+
+.contact-left form input {
+  width: 100%;
+  outline: none;
+  padding: 10px 10px 5px;
+  margin-bottom: 10px;
+}
+.contact-left form input title {
+  padding: 20px;
+}
+.contact-left form textarea {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+}
+.contact-left button {
+  padding: 15px 20px;
+  border: none;
+  background-color: #c69453;
+  margin: 23px 0 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-left form input:focus {
+  border: 2px solid black;
+}
+.contact-left form textarea:focus {
+  border: 2px solid black;
+}
+.contact-section {
+  background: url(./img/ia_200000022.jpg) no-repeat;
+  background-size: contain;
+  padding-bottom: 150px;
+}
+.contact-right img {
+}
+
+/* footer section --- */
+.footer-sec {
+  background-color: #6d6d6d;
+  color: #fff;
+}
+.f-left {
+  width: 60%;
+}
+.f-left h4 {
+  margin-left: 50px;
+  font-weight: 500;
+}
+.f-right {
+  width: 40%;
+}
+.f-right ul {
+}
+.f-right ul li {
+  display: inline-block;
+}
+.f-right ul li a {
+  color: #fff;
+  padding: 0px 14px;
+  line-height: 35px;
+  font-size: 18px;
+}
